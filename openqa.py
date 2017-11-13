@@ -24,14 +24,18 @@ if reply[0].lower() == 'y':
     print("YES")
 else:
     print("NO")
-
 def startQ():
     qAsked = 0
     while True:
         qNum = qOrder[0]
-        print("Question #" + str(qAsked+1) + ":" + q[qNum] + "\n")
         qAsked += 1
+        print("Question #", str(qAsked), ":", q[qNum])        
         qOrder.pop(0)
+        userAnswer = input()
+        def checkA():
+            if userAnswer.lower() == a[qNum].lower():
+                print("CORRECT")
+        checkA()
         if qAsked == totalQ: break
         
 
